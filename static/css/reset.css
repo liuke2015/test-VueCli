@@ -1,0 +1,90 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, iframe,
+h1, h2, h3, h4, h5, h6, p, pre,
+a, del, em, img, s, small, strong, b, u, i,
+dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details,
+footer, header,
+nav, output, section,
+time, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* custom */
+a {
+  /*color: #7e8c8d;*/
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+}
+
+a, a:active, a:link, a:visited {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+* {
+  /* box-sizing:border-box; */
+}
+
+html, body {
+  width: 100%;
+  min-width: 1200px;
+  overflow-x: auto!important;
+  font-family: "Microsoft YaHei";
+}
+
+body {
+  line-height: 1;
+  background-color: #e7ebf3;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.por {
+  position: relative;
+}
+
+.poa {
+  position: absolute;
+}
+.manage-tit{
+  font:14px/60px "Microsoft YaHei";
+}
+/*提示语样式*/
+.el-message__content{
+  display: inline-block;
+}
+/*tooltip的宽度*/
+.el-tooltip__popper{
+  max-width:70% !important;
+}
