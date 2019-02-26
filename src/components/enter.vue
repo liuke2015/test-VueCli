@@ -18,6 +18,12 @@
             <li>
               <router-link :to="{name:'directFunc',params:{id:333}}">路由重定向函数</router-link>
             </li>
+            <li>
+              <router-link to="/alias">alias别名</router-link>
+            </li>
+            <li>
+              <router-link to="/transition">transition动画</router-link>
+            </li>
           </ul>
         </div>
         <router-view class="right"></router-view>
