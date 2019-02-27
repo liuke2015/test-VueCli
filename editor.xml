@@ -1,5 +1,5 @@
 <application>
-  <component name="EditorSettings">
-    <option name="IS_WHEEL_FONTCHANGE_ENABLED" value="true" />
+  <component name="DefaultFont">
+    <option name="FONT_SIZE" value="16" />
   </component>
 </application>
