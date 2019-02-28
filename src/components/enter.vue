@@ -24,6 +24,12 @@
             <li>
               <router-link to="/transition">transition动画</router-link>
             </li>
+            <li>
+              <router-link to="/watchRouter">watch路由</router-link>
+            </li>
+            <li>
+              <router-link to="/beforeEnter">路由钩子</router-link>
+            </li>
           </ul>
         </div>
         <router-view class="right"></router-view>

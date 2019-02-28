@@ -8,6 +8,8 @@ import TestQuery from '@/components/routerTemp/TestQueryAppendExact'
 import DirectFunc from '@/components/routerTemp/directFunc'
 import AliasFun from  '@/components/routerTemp/alias'
 import Transition from '@/components/other/transition'
+import watchRouter from '@/components/other/watchRouter'
+import bEPage from '@/components/other/beforeEnter'
 
 Vue.use(Router)
 
@@ -20,6 +22,22 @@ const about = {template: "<div>right内容</div>"};
 const aaa = {template: "<div>aaa内容</div>"};
 const bbb = {template: "<div>bbb内容</div>"};
 const ccc = {template: "<div>ccc内容</div>"};
+const beforeA = {template: "<div>beforeA内容</div>"};
+const beforeB = {template: "<div>beforeB内容</div>"};
+const Page404 = {
+  template: `<div>Page404</div>`,
+  beforeRouteEnter:(to,from,next)=>{
+      console.log(to);
+      console.log(from);
+      next();
+  },
+  beforeRouteLeave:(to,from,next)=>{
+    console.log(to);
+    console.log(from);
+    next();
+  }
+};
+
 const users = {
   template: `
   <div>
@@ -44,10 +62,10 @@ let baseRouter=[
     path: '/',
     name: 'Enter',
     component: Enter,
-    redirect: 'helloWorld',
+    redirect: '/helloWorld',
     children: [
       {
-        path: 'helloWorld',
+        path: '/helloWorld',
         name: 'HelloWorld',
         component: HelloWorld,
         meta: {
@@ -219,6 +237,60 @@ let baseRouter=[
             },
           }
         ]
+      },
+      {
+        path:"watchRouter",
+        name:"watchRouter",
+        component:watchRouter,
+        redirect:"/watchRouter/aaa",
+        children:[
+          {
+            path:"/watchRouter/aaa",
+            name:"watchRouterA",
+            component:aaa,
+          },
+          {
+            path:"/watchRouter/bbb",
+            name:"watchRouterB",
+            component:bbb,
+          },
+          {
+            path:"/watchRouter/ccc",
+            name:"watchRouterC",
+            component:ccc,
+          }
+        ]
+      },
+      {
+        path:"beforeEnter",
+        name:"beforeEnter",
+        component:bEPage,
+        children:[
+          {
+            path:"/beforeEnter/beforeA",
+            name:"beforeA",
+            component:beforeA,
+            beforeEnter:(to,from,next)=>{//路由鈎子
+              console.log(to);
+              console.log(from);
+              next();//可以
+             /* next(false);*///不可以
+            }
+          },
+          {
+            path:"/beforeEnter/beforeB",
+            name:"beforeB",
+            component:beforeB,
+            beforeEnter:(to,from,next)=>{
+              next({path:"dsfsdfsdfsf"})//改变路径，跳转404
+            }
+          }
+        ]
+      },
+      {/*找不到页面，显示404页面*/
+        path:"*",
+        name:"page404",
+        component:Page404
       },
     ]
   },
