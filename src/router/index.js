@@ -10,6 +10,8 @@ import AliasFun from  '@/components/routerTemp/alias'
 import Transition from '@/components/other/transition'
 import watchRouter from '@/components/other/watchRouter'
 import bEPage from '@/components/other/beforeEnter'
+import programNav from '@/components/other/programNav'
+import pageVuex from '@/components/other/pageVuex'
 
 Vue.use(Router)
 
@@ -287,11 +289,21 @@ let baseRouter=[
           }
         ]
       },
-      {/*找不到页面，显示404页面*/
+      {
+        path:"programNav",
+        name:"programNav",
+        component:programNav
+      },
+      {
+        path:"pageVuex",
+        name:"pageVuex",
+        component:pageVuex
+      },
+      /*{/!*找不到页面，显示404页面*!/
         path:"*",
         name:"page404",
         component:Page404
-      },
+      },*/
     ]
   },
 ];

@@ -30,6 +30,12 @@
             <li>
               <router-link to="/beforeEnter">路由钩子</router-link>
             </li>
+            <li>
+              <router-link to="/programNav">编程式导航</router-link>
+            </li>
+            <li>
+              <router-link to="/pageVuex">vuex</router-link>
+            </li>
           </ul>
         </div>
         <router-view class="right"></router-view>
