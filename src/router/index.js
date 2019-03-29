@@ -11,7 +11,9 @@ import Transition from '@/components/other/transition'
 import watchRouter from '@/components/other/watchRouter'
 import bEPage from '@/components/other/beforeEnter'
 import programNav from '@/components/other/programNav'
-import pageVuex from '@/components/other/pageVuex'
+import pageVuex from '@/components/testVuex/pageVuex'
+import vuex1 from '@/components/testVuex/vuexTemp/vuex1'
+import vuexMutations from '@/components/testVuex/vuexTemp/vuexMutations'
 
 Vue.use(Router)
 
@@ -297,7 +299,20 @@ let baseRouter=[
       {
         path:"pageVuex",
         name:"pageVuex",
-        component:pageVuex
+        component:pageVuex,
+        redirect:"/pageVuex/vuex1",
+        children:[
+          {
+            path:"/pageVuex/vuex1",
+            name:vuex1,
+            component:vuex1,
+          },
+          {
+            path:"/pageVuex/vuexMutations",
+            name:vuexMutations,
+            component:vuexMutations,
+          }
+        ]
       },
       /*{/!*找不到页面，显示404页面*!/
         path:"*",
