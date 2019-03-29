@@ -15,6 +15,7 @@ import pageVuex from '@/components/testVuex/pageVuex'
 import vuex1 from '@/components/testVuex/vuexTemp/vuex1'
 import vuexMutations from '@/components/testVuex/vuexTemp/vuexMutations'
 import vuexGetters from '@/components/testVuex/vuexTemp/vuexGetters'
+import vuexActions from '@/components/testVuex/vuexTemp/vuexActions'
 
 Vue.use(Router)
 
@@ -317,6 +318,11 @@ let baseRouter=[
             path:"/pageVuex/vuexGetters",
             name:vuexGetters,
             component:vuexGetters,
+          },
+          {
+            path:"/pageVuex/vuexActions",
+            name:vuexActions,
+            component:vuexActions,
           }
         ]
       },
