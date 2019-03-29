@@ -7,6 +7,9 @@
       <li>
         <router-link to="/pageVuex/vuexMutations">vuex触发mutations与传参</router-link>
       </li>
+      <li>
+        <router-link to="/pageVuex/vuexGetters">vuex-getter</router-link>
+      </li>
     </ul>
     <div class="content">
       <router-view></router-view>

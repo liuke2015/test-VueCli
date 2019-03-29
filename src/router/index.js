@@ -14,6 +14,7 @@ import programNav from '@/components/other/programNav'
 import pageVuex from '@/components/testVuex/pageVuex'
 import vuex1 from '@/components/testVuex/vuexTemp/vuex1'
 import vuexMutations from '@/components/testVuex/vuexTemp/vuexMutations'
+import vuexGetters from '@/components/testVuex/vuexTemp/vuexGetters'
 
 Vue.use(Router)
 
@@ -311,6 +312,11 @@ let baseRouter=[
             path:"/pageVuex/vuexMutations",
             name:vuexMutations,
             component:vuexMutations,
+          },
+          {
+            path:"/pageVuex/vuexGetters",
+            name:vuexGetters,
+            component:vuexGetters,
           }
         ]
       },
