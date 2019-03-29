@@ -2,8 +2,8 @@
   <div id="vuexGetters">
     <h1>vuex获取vuexGetters</h1>
     <ul>
-      <li>vuex的count={{count}}</li>
-      <li>uex的gCount={{gCount}}</li>
+      <li>vuex的 count={{count}}</li>
+      <li>vuex的 gCount={{gCount}}</li>
     </ul>
    <!-- <button @click="$store.commit('plus')">+</button>-->
     <button @click="plus({stemp:5})">count+</button>
